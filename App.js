@@ -1,17 +1,10 @@
 import "react-native-gesture-handler";
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "react-native";
-import Home from "./screen/home";
-import Login from "./screen/login";
-import Signup from "./screen/signup";
-import Dashbottom from "./screen/dashbottom";
-import Routes from "./screen/route";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
-import RootStackScreen from "./screen/RootStackScreen";
+import Dashboard from "./screen/dashboard";
 
 let customFonts = {
   "Poppins-Regular": require("./assets/fonts/Poppins-Regular.otf"),
@@ -20,8 +13,6 @@ let customFonts = {
   "Poppins-Bold": require("./assets/fonts/Poppins-Bold.otf"),
   "Roboto-medium": require("./assets/fonts/Poppins-Medium.otf"),
 };
-
-const Drawer = createDrawerNavigator();
 
 export default class App extends Component {
   state = {
@@ -41,18 +32,11 @@ export default class App extends Component {
     if (this.state.fontsLoaded) {
       return (
         <NavigationContainer>
-            <Dashbottom />
+          <Dashboard />
           <StatusBar
-            barStyle="default-content"
-            hidden={false}
+            barStyle="light-content"
             backgroundColor="#121212"
-            translucent={true}
-          />
-          <StatusBar
-              barStyle="light-content"
-              backgroundColor="#121212"
-            ></StatusBar>
-        
+          ></StatusBar>
         </NavigationContainer>
       );
     } else {
