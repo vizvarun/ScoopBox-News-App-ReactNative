@@ -1,2 +1,2 @@
 # ScoopBox-News-App-ReactNative
-# Blah blah.
+# Blah blah. Pehli fursat pe nikal
